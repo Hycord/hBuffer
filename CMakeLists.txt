@@ -10,6 +10,7 @@ target_include_directories(hBuffer
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
-
-# Add source files
-add_subdirectory(src)
+target_sources(hBuffer
+    PRIVATE
+    src/hBuffer.cpp
+)
